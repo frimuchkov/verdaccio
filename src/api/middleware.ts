@@ -225,7 +225,6 @@ export function log(config: Config) {
         return;
       }
       logHasBeenCalled = true;
-
       const forwardedFor = req.headers['x-forwarded-for'];
       const remoteAddress = req.connection.remoteAddress;
       const remoteIP = forwardedFor ? `${forwardedFor} via ${remoteAddress}` : remoteAddress;
